@@ -1,0 +1,44 @@
+{
+  "name": ":kotlinLSPProjectDeps",
+  "displayName": "Task :kotlinLSPProjectDeps",
+  "taskPath": ":kotlinLSPProjectDeps",
+  "desc": "",
+  "group": "default",
+  "project": {
+    "isRoot": true,
+    "name": "paparazzi-test",
+    "version": "unspecified",
+    "path": ":",
+    "dir": "/Users/zsolt/paparazzi-test",
+    "buildDir": "/Users/zsolt/paparazzi-test/build",
+    "buildFile": "/Users/zsolt/paparazzi-test/build.gradle.kts"
+  },
+  "pluginIdentifier": "",
+  "parentTaskName": "",
+  "dependencies": [],
+  "startTime": "1768473341332",
+  "endTime": "1768473341333",
+  "success": {
+    "isFromCache": false,
+    "isUpToDate": false,
+    "isIncremental": false,
+    "executionReasons": ["Task has not declared any outputs despite executing actions."]
+  },
+  "taskIo": {
+    "inputs": {
+      "files": [],
+      "directories": [],
+      "properties": []
+    },
+    "outputs": {
+      "files": [],
+      "directories": []
+    },
+    "inputsHash": "",
+    "outputsHash": ""
+  },
+  "duration": "1",
+  "cacheable": false,
+  "outcome": "success",
+  "className": "org.gradle.api.DefaultTask_Decorated"
+}
