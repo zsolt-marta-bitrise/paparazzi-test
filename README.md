@@ -45,14 +45,32 @@ Or simply run all tests:
 
 ## What to Look For
 
-When debugging datacenter-specific issues, compare the output between different environments:
+When debugging datacenter-specific issues, compare the output between different environments. The test now includes extensive null safety checks and display information:
 
+### Critical Null Checks
+1. **Paparazzi instance validity** - Checks if paparazzi object itself is accessible
+2. **Context nullability** - Verifies context is not null before using it
+3. **Resources nullability** - Checks if resources object exists
+4. **Configuration nullability** - Validates configuration accessibility
+5. **Assets nullability** - Confirms asset manager is available
+
+### Display Information
+- **WindowManager** - Verifies window manager is accessible
+- **Display object** - Checks default display availability
+- **Display ID** - Display identifier (should be 0)
+- **Display Name** - Display name (may be null in layout rendering)
+- **Display State** - Current display state
+- **Display Rotation** - Screen rotation value
+- **Real Size** - Actual display dimensions in pixels
+- **DisplayManager** - System display manager service
+
+### Other Key Areas
 1. **Locale and Language Settings** - Check `LANG`, `LC_ALL`, and locale configuration
 2. **File System Paths** - Verify temp directories and file permissions
 3. **Environment Variables** - Look for differences in `HOME`, `TMPDIR`, `PATH`
 4. **System Properties** - Check `file.encoding`, `user.timezone`, etc.
-5. **Display Metrics** - Ensure density and screen dimensions are consistent
-6. **Classloader Information** - Verify classloader hierarchy
+5. **Context class names** - Verify BridgeContext is being used correctly
+6. **View creation** - Confirms views can be instantiated with the context
 
 ## Project Structure
 
