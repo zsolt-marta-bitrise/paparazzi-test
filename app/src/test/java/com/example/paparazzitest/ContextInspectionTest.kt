@@ -16,8 +16,7 @@ class ContextInspectionTest {
 
     @get:Rule
     val paparazzi = Paparazzi(
-        deviceConfig = DeviceConfig.PIXEL_5,
-        showSystemUi = false
+        deviceConfig = DeviceConfig.PIXEL_5
     )
 
     @Test
